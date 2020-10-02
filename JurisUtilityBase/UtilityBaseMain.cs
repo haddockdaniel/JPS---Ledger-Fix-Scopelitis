@@ -103,6 +103,20 @@ namespace JurisUtilityBase
             sql = "update ledgerhistory set lhcshexp=lhcashamt where lhsysnbr in (1124343,1124346)";
             _jurisUtility.ExecuteNonQuery(0, sql);
 
+            string S2 = @"update armatalloc
+set armfeercvd = armfeebld + armfeeadj, armcshexpbld = armcshexprcvd + armcshexpadj
+, armncshexprcvd = armncshexpbld + armncshexpadj
+, armsurchgrcvd = armsurchgbld + armsurchgadj
+, armintrcvd = armintbld + armintadj
+, armtax1rcvd = armtax1bld + armtax1adj
+, armtax3rcvd = armtax3bld + armtax3adj
+, armtax2rcvd = armtax2bld + armtax2adj
+where armbaldue = 0 and(armfeebld - armfeercvd + armfeeadj <> 0 OR  armcshexpbld - armcshexprcvd + armcshexpadj <> 0 OR  
+   armncshexpbld - armncshexprcvd + armncshexpadj <> 0 OR    armsurchgbld - armsurchgrcvd + armsurchgadj <> 0 OR  
+   armintbld - armintrcvd + armintadj <> 0 OR    armtax1bld - armtax1rcvd + armtax1adj <> 0 OR
+     armtax3bld - armtax3rcvd + armtax3adj <> 0 OR    armtax2bld - armtax2rcvd + armtax2adj <> 0)";
+            _jurisUtility.ExecuteNonQuery(0, S2);
+
             UpdateStatus("All Ledger Entries updated", 1, 1);
 
             MessageBox.Show("The process is complete", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.None);

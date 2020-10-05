@@ -83,3 +83,4 @@ D:\Utility Repository\JPS---Ledger-Fix-Scopelitis\JurisUtilityBase\obj\x86\Relea
 D:\Utility Repository\JPS---Ledger-Fix-Scopelitis\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csproj.CopyComplete
 D:\Utility Repository\JPS---Ledger-Fix-Scopelitis\JurisUtilityBase\obj\x86\Release\JPS - Ledger Fix Scopelitis.exe
 D:\Utility Repository\JPS---Ledger-Fix-Scopelitis\JurisUtilityBase\obj\x86\Release\JPS - Ledger Fix Scopelitis.pdb
+D:\Utility Repository\JPS---Ledger-Fix-Scopelitis\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csprojAssemblyReference.cache

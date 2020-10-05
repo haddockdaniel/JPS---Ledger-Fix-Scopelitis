@@ -104,7 +104,7 @@ namespace JurisUtilityBase
             _jurisUtility.ExecuteNonQuery(0, sql);
 
             string S2 = @"update armatalloc
-set armfeercvd = armfeebld + armfeeadj, armcshexpbld = armcshexprcvd + armcshexpadj
+set armfeercvd = armfeebld + armfeeadj, armcshexprcvd = armcshexpbld + armcshexpadj
 , armncshexprcvd = armncshexpbld + armncshexpadj
 , armsurchgrcvd = armsurchgbld + armsurchgadj
 , armintrcvd = armintbld + armintadj
